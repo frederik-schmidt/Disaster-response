@@ -75,7 +75,7 @@ After launching, new messages can be classified, as shown in the screenshot belo
 
 ### 3.1 Clone the repository:
 
-`> git clone`
+`> git clone https://github.com/frederik-schmidt/Disaster-response.git`
 
 ### 3.2 Create a virtual environment
 
