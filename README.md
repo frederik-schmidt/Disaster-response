@@ -79,10 +79,10 @@ After launching, open the link `http://127.0.0.1:3000` in your browser to open t
 
 ### 3.2 Create a virtual environment
 
-We strongly recommend that you use virtual environments to install libraries
+It is highly recommended to use virtual environments to install packages.
 
-`> conda create -n disaster_response python=3.8 jupyterlab pandas numpy matplotlib`
-(where myenv is the environment name of your choice)
+`> conda create -n disaster_response python=3.8 jupyterlab`
+(where `disaster_response` is the environment name of your choice)
 
 ### 3.3 Activate the virtual environment
 
@@ -91,7 +91,12 @@ We strongly recommend that you use virtual environments to install libraries
 
 ### 3.4 Install the required packages
 
-`> pip install -r requirements.txt --user`
+```
+> cd Disaster-response
+> pip install -r requirements.txt
+```
+
+When the packages have been installed, everything is set up and ready to run the project steps described in section 2.
 
 ## 4. File Structure
 
@@ -126,7 +131,7 @@ The project uses Python 3.8 and additional libraries:
 - json
 - nltk
 - numpy
-- andas
+- pandas
 - pickle
 - plotly
 - re
