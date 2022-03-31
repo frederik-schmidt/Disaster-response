@@ -73,7 +73,7 @@ After launching, open the link `http://127.0.0.1:3000` in your browser to open t
 
 ## 3. Installation Guide
 
-### 3.1 Clone the repository:
+### 3.1 Clone the repository
 
 `> git clone https://github.com/frederik-schmidt/Disaster-response.git`
 
