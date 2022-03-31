@@ -6,7 +6,6 @@ import warnings
 import nltk
 import numpy as np
 import pandas as pd
-from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from sklearn.ensemble import RandomForestClassifier
@@ -18,7 +17,7 @@ from sklearn.pipeline import Pipeline
 from sqlalchemy import create_engine
 
 warnings.filterwarnings("ignore")
-nltk.download(["punkt", "stopwords"])
+nltk.download(["punkt", "stopwords", "wordnet", "omw-1.4"])
 
 
 def load_data(database_filepath: str) -> tuple:
@@ -51,6 +50,10 @@ def tokenize(text: str) -> list:
     :param text: input text sequence
     :return: tokenized text sequence
     """
+    # import in the function to avoid this error
+    # https://stackoverflow.com/questions/44911539/pickle-picklingerror-args0-from-newobj-args-has-the-wrong-class-with-hado
+    from nltk.corpus import stopwords
+
     # normalize text (set lowercase and remove punctuation)
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower().strip())
 

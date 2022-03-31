@@ -49,7 +49,7 @@ Run the Machine Learning Pipeline (this takes up to 30 min):
 
 ```
 > cd ../models/
-> python train_classifier.py ../data/DisasterResponse.db distaster_response_model.pkl
+> python train_classifier.py ../data/DisasterResponse.db disaster_response_model.pkl
 ```
 
 Output:
@@ -67,7 +67,7 @@ Launch the Web App:
 > python run.py
 ```
 
-After launching, new messages can be classified, as shown in the screenshot below.
+After launching, open the link `http://127.0.0.1:3000` in your browser to open the web app. Here, new messages can be classified, as shown in the screenshot below.
 
 ![alt text](/img/web_app.png "Disaster Response Project")
 
