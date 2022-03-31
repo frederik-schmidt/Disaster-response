@@ -37,7 +37,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
         categories[column] = categories[column].str[-1]
 
         # convert column from string to numeric
-        categories[column] = categories[column].astype("Int64")
+        categories[column] = pd.to_numeric(categories[column])
         
     df = df.drop(columns=["categories"])
     df = pd.concat([df, categories], axis=1)
