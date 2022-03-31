@@ -34,7 +34,10 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     
     for column in categories:
         # set each value to be the last character of the string
-        categories[column] = categories[column].str[-1]
+        categories[column] = categories[column].str[-1].astype(int)
+
+        # make all columns binary (a few values, e.g. in "related", are higher than 1)
+        categories[column] = categories[column].map(lambda x: 1 if x == 2 else x)
 
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])

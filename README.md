@@ -110,14 +110,12 @@ When the packages have been installed, everything is set up and ready to run the
 ├── data
 │   ├── disaster_categories.csv
 │   ├── disaster_messages.csv
-│   ├── process_data.ipynb
 │   └── process_data.py
 ├── img
 │   ├── etl_pipeline.png
 │   ├── ml_pipeline.png
 │   └── web_app.png
 ├── models
-│   ├── train_classifier.ipynb
 │   └── train_classifier.py
 ├── README.md
 └── requirements.txt
@@ -131,6 +129,7 @@ The project uses Python 3.8 and additional libraries:
 - json
 - nltk
 - numpy
+- os
 - pandas
 - pickle
 - plotly

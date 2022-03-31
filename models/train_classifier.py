@@ -33,9 +33,6 @@ def load_data(database_filepath: str) -> tuple:
 
     category_names = df.columns[4:].tolist()
     
-    # set all category columns to 0 or 1 (a few values, e.g. in "related", are higher than 1)
-    df[category_names] = df[category_names].astype(bool).astype(int)
-    
     X = df["message"].values
     y = df[category_names].values
     return X, y, category_names
